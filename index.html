@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Number Guessing Game</h1>
+            <p>I'm thinking of a number between <span id="minRange">1</span> and <span id="maxRange">100</span></p>
+        </header>
+
+        <div class="game-container">
+            <div class="input-section">
+                <input type="number" id="guessInput" placeholder="Enter your guess (1-100)" min="1" max="100">
+                <button id="guessBtn">
+                    <i class="fas fa-paper-plane"></i> Guess
+                </button>
+            </div>
+
+            <div class="actions">
+                <button id="hintBtn" class="hint-btn">
+                    <i class="fas fa-lightbulb"></i> Get Hint
+                </button>
+                <button id="restartBtn" class="restart-btn">
+                    <i class="fas fa-redo"></i> New Game
+                </button>
+            </div>
+
+            <div class="game-info">
+                <div class="score">
+                    <i class="fas fa-tally"></i>
+                    <span id="guessCount">0</span> Guesses
+                </div>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="guess-history">
+                <h3>Your Guesses:</h3>
+                <div id="guessList" class="guess-list"></div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Guess a number between 1 and 100</li>
+                <li>You'll get hints if your guess is too high or too low</li>
+                <li>Try to find the number in the fewest guesses!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
